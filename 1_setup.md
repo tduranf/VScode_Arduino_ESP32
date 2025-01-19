@@ -41,6 +41,7 @@ To creata a first program, you have to create a VScode project folder:
 - Specify Board: ESP32 Dev Module as a generic ESP32 board
 - Specify the port (usually COM3: Silicon Labs CP210x USB) in low bar menu
 - In this arduino.json file add: "output": "./Programs/blink/build" (modify to the program path)
+- Verify the Selected program in Bottom menu bar is the correct one.
 - this will make compilation files to be available for future project modifications with less compilation time
 - If you find errors in include lines, fix this errors selecting "Disable squiggles errors" (this will be added in "settings.json")
 - Now you can upload (it compiles first and uploads later)

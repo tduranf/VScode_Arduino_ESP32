@@ -1,10 +1,16 @@
 # **Programs**
 
+The main objective is to read data from an IMU sensor and send this data to a main computer for its real-time processing.
+
+**Program to read data from an IMU sensor**
+
+
+
 We propose you some sample programs to review the communication performances using:
 - Bluetooth 
 - WiFi
 
-The main objective is to read data from an IMU sensor and send this data to a main computer for its real-time processing.
+
 
 ## **1. Bluetooth communication**
 
@@ -24,6 +30,19 @@ The ESP32 offers both Classic Bluetooth (BR/EDR) and Bluetooth Low Energy (BLE).
 - Short Bursts of Data: Designed for infrequent data transfers, such as sensor readings, notifications, and control signals.
 - Range: Can achieve comparable or even better range than Classic Bluetooth 
 - Use Cases: Wearables, IoT devices, and other applications where low power consumption is crucial.
+
+We have mada a very simple BLE test program: 
+
+**BLE_test1.ino**:
+- Read input from monitor and write to Mobile
+- Read input brom Mobile and write to Serial Monitor
+
+**BLE_test2.ino**:
+- Read input from monitor and write to Mobile
+- Read input brom Mobile and write to Serial Monitor
+
+We have made some modifications to the initial program to send IMU data with BLE: **IMU_send_BLE.ino**
+You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 
 ## **2. WiFi communication**
 
