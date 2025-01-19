@@ -46,11 +46,18 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 
 ## **2. WiFi communication**
 
+We have made a program: WebServer_IMU_send.ino
+
 The ESP32 offers different options:
 - Publish IMU data in a web server located in ESP32
 - Use websockets
 
 ### **2.1. ESP32 webserver**
+
+Install libraries:
+- ESPAsyncTCP by me-no-dev
+- ArduinoJson
+
 
 This program makes an ESP32 act as a web server that displays real-time orientation data (Roll, Pitch, Yaw) from an MPU-9250 IMU sensor.
 
