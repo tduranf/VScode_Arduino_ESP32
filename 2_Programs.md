@@ -4,13 +4,13 @@ The main objective is to read data from an IMU sensor and send this data to a ma
 
 **Program to read data from an IMU sensor**
 
-
+A first simple program is created to read IMU MPU9250 sensor. We can use the libraries:
+- SparkFunMPU9250-DMP (IMU_read1.ino)
+. MPU9250 by hideakitai (IMU_read2.ino)
 
 We propose you some sample programs to review the communication performances using:
 - Bluetooth 
 - WiFi
-
-
 
 ## **1. Bluetooth communication**
 
@@ -38,10 +38,10 @@ We have mada a very simple BLE test program:
 - Read input brom Mobile and write to Serial Monitor
 
 **BLE_test2.ino**:
-- Read input from monitor and write to Mobile
-- Read input brom Mobile and write to Serial Monitor
+- Send data to Mobile
+- Send data to Serial Monitor
 
-We have made some modifications to the initial program to send IMU data with BLE: **IMU_send_BLE.ino**
+We have made some modifications to the initial program to send IMU data with BLE: **BLE_IMU_send2.ino**
 You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 
 ## **2. WiFi communication**

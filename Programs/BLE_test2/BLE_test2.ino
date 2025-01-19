@@ -9,8 +9,8 @@ void setup() {
 }
 
 void loop() {
-  SerialBT.println("Hola2Mobil"); // Use println() to send the string with a newline
-  Serial.println("Escric_SerialMonitor!");
+  SerialBT.println("Writting_Mobile!"); // Use println() to send the string with a newline
+  Serial.println("Writting_SerialMonitor!");
 
   delay(1000);
 }
