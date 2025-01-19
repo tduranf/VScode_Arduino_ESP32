@@ -21,12 +21,12 @@ Sometimes you have not installed Arduino USB drivers in your PC:
 
 ## **2. Install Arduino extension in VScode**
 
-Select the extension: Arduino Community Edition (vscode-arduino)
+Select the extension: "Arduino Community Edition" (vscode-arduino)
 
-Select the Settings from the "Arduino" extension and verify:
-    - Arduino: Disable Testing Open (SELECTED)
-    - Arduino: Enable USBDetection (SELECTED)
-    - Arduino: Use Arduino CLI (SELECTED)
+Select the Settings from this extension and verify:
+- Arduino: Disable Testing Open (SELECTED)
+- Arduino: Enable USBDetection (SELECTED)
+- Arduino: Use Arduino CLI (SELECTED)
 
 With these options the VScode will automatically configure the Arduino project
 
@@ -35,11 +35,13 @@ With these options the VScode will automatically configure the Arduino project
 
 To creata a first program, you have to create a VScode project folder:
 
-- Create a fist Arduino folder (i.e. test) and file (i.e. test.ino) with the same name and extension "ino"
-- Open the Command Palette (Ctrl+Shift+P) and run "Arduino: Initialize" to create an arduino.json file
-- In this arduino.json file add: "output": "./test/build",
+- Create a fist Arduino folder (i.e. blink) and file (i.e. blink.ino) with the same name and extension "ino"
+- Delete (if exists) "arduino.json" file
+- Open the Command Palette (Ctrl+Shift+P) and run "Arduino: Initialize" to create a new arduino.json file
+- Specify Board: ESP32 Dev Module as a generic ESP32 board
+- Specify the port (usually COM3: Silicon Labs CP210x USB) in low bar menu
+- In this arduino.json file add: "output": "./Programs/blink/build" (modify to the program path)
 - this will make compilation files to be available for future project modifications with less compilation time
-- Specify the "ESP32 Dev module" as a generic ESP32 board and the port.
-- Specify the port
+- If you find errors in include lines, fix this errors selecting "Disable squiggles errors" (this will be added in "settings.json")
 - Now you can upload (it compiles first and uploads later)
 - The compiler is selected automatically on "Arduino"
