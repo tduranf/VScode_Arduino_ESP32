@@ -131,10 +131,6 @@ void setup() {
   connectToWiFi();
   server.begin();
 
-  // Initialize Bluetooth
-  //SerialBT.begin("ESP32_MPU9250"); // Set Bluetooth device name
-  //Serial.println("Bluetooth initialized. Waiting for connections...");
-
   // Initialize the MPU-9250
   initIMU();
 }
@@ -142,11 +138,6 @@ void setup() {
 void loop() {
   updateOrientation(); // Get the latest RPY values
   handleWebRequest();  // Handle client requests
-
-  // Send RPY values over Bluetooth
-  //if (SerialBT.connected()) {
-  //  SerialBT.printf("Roll: %.2f, Pitch: %.2f, Yaw: %.2f\n", roll, pitch, yaw);
-  //}
 
   delay(20); // Update every 100 ms
 }
