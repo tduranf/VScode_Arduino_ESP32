@@ -46,3 +46,10 @@ To creata a first program, you have to create a VScode project folder:
 - If you find errors in include lines, fix this errors selecting "Disable squiggles errors" (this will be added in "settings.json")
 - Now you can upload (it compiles first and uploads later)
 - The compiler is selected automatically on "Arduino"
+
+For successive program uploads:
+- Modify the program
+- modify the arduino.json
+- Initialyse again with Crtl+shift+P --> Initialize
+- A new [Starting] line will start
+- Perhaps ESP32 reset will be needed

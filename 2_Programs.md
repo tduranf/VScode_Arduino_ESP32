@@ -49,31 +49,28 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 We have made a program: WebServer_IMU_send.ino
 
 The ESP32 offers different options:
-- Publish IMU data in a web server located in ESP32
-- Use websockets
+- Webserver 
+- Socket UDP
 
 ### **2.1. ESP32 webserver**
 
-Install libraries:
-- ESPAsyncTCP by me-no-dev
-- ArduinoJson
+Publishes IMU data in real-time to a web server located in ESP32 
+
+Programs:
+- WiFi_WebServer_IMU1.ino: Uses SparkFun IMU library
+- WiFi_WebServer_IMU2.ino: Uses mpu9250.h IMU library
 
 
-This program makes an ESP32 act as a web server that displays real-time orientation data (Roll, Pitch, Yaw) from an MPU-9250 IMU sensor.
+### **2.2. Socket UDP**
 
-- Includes and Setup: Includes necessary libraries (WiFi, IMU, JSON)
-- sets up Wi-Fi credentials, initializes the IMU, and starts a web server.
-- IMU Data Acquisition: Reads orientation data (RPY) from the IMU using its interrupt pin to trigger readings only when new data is available.
-- Web Server Handling:
-- Listens for incoming web requests.
-If a request for /data is received, it sends the current RPY values as a JSON object.
-For any other request (typically the main page request), it sends a simple HTML page that uses JavaScript and fetch to periodically request the /data endpoint and update the displayed values. This has been changed to a meta refresh tag to reduce the load on the ESP32.
-Loop: Continuously updates the orientation data from the IMU and handles incoming web requests.
-In essence, it's a simple web-based dashboard that shows the orientation of the IMU in real time. It's using a basic polling method (meta refresh) to update the data on the webpage. For more demanding real-time applications, WebSockets would be a better choice, but for simple visualization, this approach is sufficient and more efficient for the ESP32 in terms of processing power.
+This program reads orientation data (roll, pitch, yaw) from an MPU-9250 sensor connected to an ESP32 and sends this data over a Wi-Fi network using UDP (User Datagram Protocol) to a specified IP address and port.
 
-Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).
-Type "Arduino: Library Manager" and select it.
-In the Library Manager, search for "ArduinoJson".
-Select the latest version and click Install.
+This is useful for applications where you need to receive sensor data on a computer or other device in real-time. UDP is chosen for its speed and low overhead, making it suitable for streaming data, even though it doesn't guarantee delivery like TCP.
+
+Programs: 
+- ESP32 sends IMU data to computer (WiFi_SocketUDP_IMU.ino)
+- ESP32_1 and ESP32_2 sends IMU data to computer (WiFi_SocketUDP_2IMU.ino)
+- ESP32_1 sends IMU data to ESP32_2 and Computer (ESP32_Sender.ino)
+- ESP32_2 receives IMU data from ESP32_1 (ESP32_Receiver.ino)
 
 
