@@ -11,7 +11,7 @@ Bibliography:
 
 Sometimes you have not installed Arduino USB drivers in your PC:
 
-- Go to "Arduino drivers's link and Download the drivers folder to “Descargas”. Unzip the downloaded driver.
+- Go to "Arduino drivers's link and Download the drivers folder to “Downloads”. Unzip the downloaded driver.
 - connect your ESP32 on USB port
 - Open “Administrador de dispositivos”
 - Right click to the port with warnings
@@ -24,6 +24,9 @@ Sometimes you have not installed Arduino USB drivers in your PC:
 Select the extension: "Arduino Community Edition" (vscode-arduino)
 
 Select the Settings from this extension and verify:
+- Arduino: Analyze On Open (UnSelected)
+- Arduino: Analyze On Setting Change (UnSelected)
+- Arduino: Disable Intelli Sense Auto Gen (Selected)
 - Arduino: Disable Testing Open (SELECTED)
 - Arduino: Enable USBDetection (SELECTED)
 - Arduino: Use Arduino CLI (SELECTED)
@@ -38,18 +41,17 @@ To creata a first program, you have to create a VScode project folder:
 - Create a fist Arduino folder (i.e. blink) and file (i.e. blink.ino) with the same name and extension "ino"
 - Delete (if exists) "arduino.json" file
 - Open the Command Palette (Ctrl+Shift+P) and run "Arduino: Initialize" to create a new arduino.json file
+- Specify the File you want to upload
+- Do not care about the Selected program in Bottom menu bar! (This is not used).
 - Specify Board: ESP32 Dev Module as a generic ESP32 board
+- The compiler is selected automatically on "Arduino"
 - Specify the port (usually COM3: Silicon Labs CP210x USB) in low bar menu
 - In this arduino.json file add: "output": "./Programs/blink/build" (modify to the program path)
-- Verify the Selected program in Bottom menu bar is the correct one.
 - this will make compilation files to be available for future project modifications with less compilation time
-- If you find errors in include lines, fix this errors selecting "Disable squiggles errors" (this will be added in "settings.json")
+- If you find errors in include lines, fix this errors selecting "Disable squiggles errors" (this will be added in "settings.json"--> "C_Cpp.errorSquiggles": "disabled")
 - Now you can upload (it compiles first and uploads later)
-- The compiler is selected automatically on "Arduino"
 
 For successive program uploads:
 - Modify the program
 - modify the arduino.json
-- Initialyse again with Crtl+shift+P --> Initialize
-- A new [Starting] line will start
-- Perhaps ESP32 reset will be needed
+- Select "Verify" or "Upload"

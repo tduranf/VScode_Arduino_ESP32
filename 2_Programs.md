@@ -6,7 +6,7 @@ The main objective is to read data from an IMU sensor and send this data to a ma
 
 A first simple program is created to read IMU MPU9250 sensor. We can use the libraries:
 - SparkFunMPU9250-DMP (IMU_read1.ino)
-. MPU9250 by hideakitai (IMU_read2.ino)
+- MPU9250 by hideakitai (IMU_read2.ino)
 
 We propose you some sample programs to review the communication performances using:
 - Bluetooth 
@@ -27,7 +27,7 @@ The ESP32 offers both Classic Bluetooth (BR/EDR) and Bluetooth Low Energy (BLE).
 
 - Low Power Consumption
 - Lower Data Rates: Not ideal for continuous high-bandwidth data streaming.
-- Short Bursts of Data: Designed for infrequent data transfers, such as sensor readings, notifications, and control signals.
+- Short Bursts of Data: Designed for unfrequent data transfers, such as sensor readings, notifications, and control signals.
 - Range: Can achieve comparable or even better range than Classic Bluetooth 
 - Use Cases: Wearables, IoT devices, and other applications where low power consumption is crucial.
 
@@ -46,9 +46,15 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 
 ## **2. WiFi communication**
 
-We have made a program: WebServer_IMU_send.ino
+Assigning fixed IPs and hostnames to each ESP32 prevents IP conflicts and simplifies device management, making it easier to identify and access each device consistently. This is especially useful in a lab with multiple devices.
 
-The ESP32 offers different options:
+A First program has been made to assign IP address and hostname to an ESP32: WiFi_IP_hostname.ino
+
+In this program we have created a configureNetwork() function that we can use in applications where we are using several ESP32s.
+
+The main objective is to read an IMU sensor and send data to a local computer to make postprocessing.
+
+The ESP32 offers different interesting options:
 - Webserver 
 - Socket UDP
 
