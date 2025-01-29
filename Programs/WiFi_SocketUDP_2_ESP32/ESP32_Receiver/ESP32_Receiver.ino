@@ -6,8 +6,8 @@
 const int deviceId = 2; // Has to be a number
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "Robotics_UB";
+const char *password = "rUBot_xx";
 
 // UDP settings
 const int udpPort = 12345;

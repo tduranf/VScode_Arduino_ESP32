@@ -33,22 +33,40 @@ The ESP32 offers both Classic Bluetooth (BR/EDR) and Bluetooth Low Energy (BLE).
 
 We have mada a very simple BLE test program: 
 
+You need to install "Serial Bluetooth Terminal" App in your mobile phone.
+
 **BLE_test1.ino**:
 - Read input from monitor and write to Mobile
 - Read input brom Mobile and write to Serial Monitor
+
+| <img src="Doc/Images/BLE_test1_1.png" width="400"/> | <img src="Doc/Images/BLE_test1_2.png" width="200"/> |
+|:--:|:--:|
+| **Serial Monitor** | **Mobile Phone BT** |
+
 
 **BLE_test2.ino**:
 - Send data to Mobile
 - Send data to Serial Monitor
 
+| <img src="Doc/Images/BLE_test2_1.png" width="400"/> | <img src="Doc/Images/BLE_test2_2.png" width="200"/> |
+|:--:|:--:|
+| **Serial Monitor** | **Mobile Phone BT** |
+
 We have made some modifications to the initial program to send IMU data with BLE: **BLE_IMU_send2.ino**
-You need to install "Serial Bluetooth Terminal" App in your mobile phone.
+
+| <img src="Doc/Images/BLE_IMU_send2_1.png" width="400"/> | <img src="Doc/Images/BLE_IMU_send2_2.png" width="200"/> |
+|:--:|:--:|
+| **Serial Monitor** | **Mobile Phone BT** |
 
 ## **2. WiFi communication**
 
 Assigning fixed IPs and hostnames to each ESP32 prevents IP conflicts and simplifies device management, making it easier to identify and access each device consistently. This is especially useful in a lab with multiple devices.
 
-A First program has been made to assign IP address and hostname to an ESP32: WiFi_IP_hostname.ino
+A First program has been made to assign IP address and hostname to an ESP32: **WiFi_IP_hostname.ino**
+
+| <img src="Doc/Images/WiFi_IP_hostname.png" width="400"/> |
+|:--:|
+| **Serial Monitor** |
 
 In this program we have created a configureNetwork() function that we can use in applications where we are using several ESP32s.
 
@@ -66,6 +84,10 @@ Programs:
 - WiFi_WebServer_IMU1.ino: Uses SparkFun IMU library
 - WiFi_WebServer_IMU2.ino: Uses mpu9250.h IMU library
 
+| <img src="Doc/Images/WiFi_WebServer_IMU2_1.png" width="400"/> | <img src="Doc/Images/WiFi_WebServer_IMU2_2.png" width="400"/> |
+|:--:|:--:|
+| **Serial Monitor** | **Web Server** |
+
 
 ### **2.2. Socket UDP**
 
@@ -74,9 +96,20 @@ This program reads orientation data (roll, pitch, yaw) from an MPU-9250 sensor c
 This is useful for applications where you need to receive sensor data on a computer or other device in real-time. UDP is chosen for its speed and low overhead, making it suitable for streaming data, even though it doesn't guarantee delivery like TCP.
 
 Programs: 
-- ESP32 sends IMU data to computer (WiFi_SocketUDP_IMU.ino)
-- ESP32_1 and ESP32_2 sends IMU data to computer (WiFi_SocketUDP_2IMU.ino)
-- ESP32_1 sends IMU data to ESP32_2 and Computer (ESP32_Sender.ino)
-- ESP32_2 receives IMU data from ESP32_1 (ESP32_Receiver.ino)
+- ESP32 sends IMU data to computer (**WiFi_SocketUDP_IMU.ino**)
 
+| <img src="Doc/Images/WiFi_SocketUDP_IMU_1.png" width="300"/> | <img src="Doc/Images/WiFi_SocketUDP_IMU_2.png" width="380"/> |<img src="Doc/Images/WiFi_SocketUDP_IMU_3.png" width="230"/> |
+|:--:|:--:|:--:|
+| **Serial Monitor** | **Computer** | **Router** |
 
+- ESP32_1 and ESP32_2 sends IMU data to computer (**WiFi_SocketUDP_2IMU.ino**)
+- ESP32_1 sends IMU data to ESP32_2 and Computer (**ESP32_Sender.ino**)
+- ESP32_2 receives IMU data from ESP32_1 (**ESP32_Receiver.ino**)
+
+| <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_1.png" width="400"/> | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_2.png" width="460"/> |
+|:--:|:--:|
+| **Serial Monitor Sender** | **Computer** |
+
+| <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_3.png" width="200"/> | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_4.png" width="700"/> |
+|:--:|:--:|
+|  **Router** | **Computer** |

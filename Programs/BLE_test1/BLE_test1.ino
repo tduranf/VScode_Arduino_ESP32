@@ -1,3 +1,4 @@
+#include <Wire.h>
 #include <BluetoothSerial.h>
 
 BluetoothSerial SerialBT;

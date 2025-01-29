@@ -1,7 +1,7 @@
-# 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_read\\BLE_IMU_read.ino"
-# 2 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_read\\BLE_IMU_read.ino" 2
-# 3 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_read\\BLE_IMU_read.ino" 2
-# 4 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_read\\BLE_IMU_read.ino" 2
+# 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_send2\\BLE_IMU_send2.ino"
+# 2 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_send2\\BLE_IMU_send2.ino" 2
+# 3 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_send2\\BLE_IMU_send2.ino" 2
+# 4 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\BLE_IMU_send2\\BLE_IMU_send2.ino" 2
 
 MPU9250 mpu;
 BluetoothSerial SerialBT;
@@ -45,9 +45,10 @@ void send_rpy_bluetooth() {
 
   // Send data via Bluetooth (CSV format)
   if (SerialBT.connected()) {
-    SerialBT.print(roll, 0); SerialBT.print(",");
-    SerialBT.print(pitch, 0); SerialBT.print(",");
-    SerialBT.println(yaw, 0);
+    SerialBT.println("Roll, Pitch, Yaw: ");
+    SerialBT.print("Roll: "); SerialBT.print(roll, 0); SerialBT.print(",");
+    SerialBT.print("Pitch: "); SerialBT.print(pitch, 0); SerialBT.print(",");
+    SerialBT.print("Yaw: "); SerialBT.println(yaw, 0);
   } else {
     Serial0.println("Bluetooth not connected. Data only on Serial.");
   }

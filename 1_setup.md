@@ -26,6 +26,7 @@ Select the extension: "Arduino Community Edition" (vscode-arduino)
 Select the Settings from this extension and verify:
 - Arduino: Analyze On Open (UnSelected)
 - Arduino: Analyze On Setting Change (UnSelected)
+- Arduino: Clear Output On Build (Selected)
 - Arduino: Disable Intelli Sense Auto Gen (Selected)
 - Arduino: Disable Testing Open (SELECTED)
 - Arduino: Enable USBDetection (SELECTED)

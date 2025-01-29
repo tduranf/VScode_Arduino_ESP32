@@ -1,5 +1,5 @@
-C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\ESP32_Tutorial\VScode_Arduino_ESP32\Programs\BLE_test2\build\sketch\BLE_test2.ino.cpp.o: \
- C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\ESP32_Tutorial\VScode_Arduino_ESP32\Programs\BLE_test2\build\sketch\BLE_test2.ino.cpp \
+C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\Classes_PROJ\TP\VScode_Arduino_ESP32\Programs\BLE_test2\build\sketch\BLE_test2.ino.cpp.o: \
+ C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\Classes_PROJ\TP\VScode_Arduino_ESP32\Programs\BLE_test2\build\sketch\BLE_test2.ino.cpp \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/Arduino.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/esp_arduino_version.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-632e0c2a\esp32/include/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
@@ -143,6 +143,10 @@ C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Man
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-632e0c2a\esp32/include/esp_hw_support/include/hal/cpu_ll.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/io_pin_remap.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/Arduino.h \
+ C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\libraries\Wire\src/Wire.h \
+ C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/esp32-hal.h \
+ C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/esp32-hal-log.h \
+ C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/HardwareI2C.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\libraries\BluetoothSerial\src/BluetoothSerial.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-632e0c2a\esp32/include/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-632e0c2a\esp32/include/bt/host/bluedroid/api/include/api/esp_bt_defs.h \

@@ -44,9 +44,10 @@ void send_rpy_bluetooth() {
 
   // Send data via Bluetooth (CSV format)
   if (SerialBT.connected()) {
-    SerialBT.print(roll, 0); SerialBT.print(",");
-    SerialBT.print(pitch, 0); SerialBT.print(",");
-    SerialBT.println(yaw, 0);
+    SerialBT.println("Roll, Pitch, Yaw: ");
+    SerialBT.print("Roll: "); SerialBT.print(roll, 0); SerialBT.print(",");
+    SerialBT.print("Pitch: "); SerialBT.print(pitch, 0); SerialBT.print(",");
+    SerialBT.print("Yaw: "); SerialBT.println(yaw, 0);
   } else {
     Serial.println("Bluetooth not connected. Data only on Serial.");
   }
