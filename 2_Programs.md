@@ -35,7 +35,11 @@ We have mada a very simple BLE test program:
 
 You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 
-**BLE_test1.ino**:
+<div style="display: flex; justify-content: center;">
+  <img src="Doc/Images/BLE.png" width="600"/>
+</div>
+
+**BLE_test1**:
 - Read input from monitor and write to Mobile
 - Read input brom Mobile and write to Serial Monitor
 
@@ -44,7 +48,7 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 | **Serial Monitor** | **Mobile Phone BT** |
 
 
-**BLE_test2.ino**:
+**BLE_test2**:
 - Send data to Mobile
 - Send data to Serial Monitor
 
@@ -52,7 +56,9 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 |:--:|:--:|
 | **Serial Monitor** | **Mobile Phone BT** |
 
-We have made some modifications to the initial program to send IMU data with BLE: **BLE_IMU_send2.ino**
+**BLE_IMU_send2**
+
+We have made some modifications to the initial program to send IMU data with BLE: 
 
 | <img src="Doc/Images/BLE_IMU_send2_1.png" width="400"/> | <img src="Doc/Images/BLE_IMU_send2_2.png" width="200"/> |
 |:--:|:--:|
@@ -96,20 +102,44 @@ This program reads orientation data (roll, pitch, yaw) from an MPU-9250 sensor c
 This is useful for applications where you need to receive sensor data on a computer or other device in real-time. UDP is chosen for its speed and low overhead, making it suitable for streaming data, even though it doesn't guarantee delivery like TCP.
 
 Programs: 
-- ESP32 sends IMU data to computer (**WiFi_SocketUDP_IMU.ino**)
+- **WiFi_SocketUDP_IMU**
+
+    - ESP32 connects to the WiFi network
+    - sends IMU data to computer
+    - Computer listens to all interfaces (IPs)
+    - Extracts the RPY values
+
+<img src="Doc/Images/WiFi_SocketUDP_IMU.png" width="700"/>
 
 | <img src="Doc/Images/WiFi_SocketUDP_IMU_1.png" width="300"/> | <img src="Doc/Images/WiFi_SocketUDP_IMU_2.png" width="380"/> |<img src="Doc/Images/WiFi_SocketUDP_IMU_3.png" width="230"/> |
 |:--:|:--:|:--:|
 | **Serial Monitor** | **Computer** | **Router** |
 
-- ESP32_1 and ESP32_2 sends IMU data to computer (**WiFi_SocketUDP_2IMU.ino**)
-- ESP32_1 sends IMU data to ESP32_2 and Computer (**ESP32_Sender.ino**)
-- ESP32_2 receives IMU data from ESP32_1 (**ESP32_Receiver.ino**)
+- **WiFi_SocketUDP_2IMU**
+
+    ESP32_1 and ESP32_2 sends IMU data to computer
+
+- **WiFi_SocketUDP_2_ESP32** 
+
+    ESP32_receiver listen RPY data from ESP32 sender and ESP32_sender sends RPY data to ESP32_receiver and computer.
+    - ESP32_receiver (**ESP32_Receiver.ino**):
+        - connects to the WiFi network 
+        - displays its IP address on setup
+        - receives from ESP32_sender the IMU data
+    - ESP32_sender (**ESP32_Sender.ino**)
+        - connects to the same WiFi network
+        - sends IMU data to ESP32_receiver and computer
+    - Computer (**Read_from_sender.py**)
+        - listens to all interfaces (IPs)
+        - Extracts the RPY values received from ESP32_sender
+
+<img src="Doc/Images/WiFi_SocketUDP_2_ESP32.png" width="700"/>
+
 
 | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_1.png" width="400"/> | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_2.png" width="460"/> |
 |:--:|:--:|
-| **Serial Monitor Sender** | **Computer** |
+| **Serial Monitor Receiver (IP: 192.168.0.161)** | **Serial Monitor Sender (IP: 192.168.0.152)** |
 
 | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_3.png" width="200"/> | <img src="Doc/Images/WiFi_SocketUDP_2_ESP32_4.png" width="700"/> |
 |:--:|:--:|
-|  **Router** | **Computer** |
+|  **Router** | **Computer received data** |
