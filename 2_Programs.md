@@ -31,15 +31,21 @@ The ESP32 offers both Classic Bluetooth (BR/EDR) and Bluetooth Low Energy (BLE).
 - Range: Can achieve comparable or even better range than Classic Bluetooth 
 - Use Cases: Wearables, IoT devices, and other applications where low power consumption is crucial.
 
-We have mada a very simple BLE test program: 
+We will use Classic Bluetooth to send data to:
 
-You need to install "Serial Bluetooth Terminal" App in your mobile phone.
+- a mobile phone: You need to install one of the following Apps to be able to see the data sent by the ESP32:
+    - Serial Bluetooth Terminal App
+    - BluetoothElectronics App
+    - Arduino Bluetooth control App
+    - others...
+- computer: Has to be able to read the data sent by the ESP32, or you need to use a Bluetooth dongle.
+
 
 <div style="display: flex; justify-content: center;">
   <img src="Doc/Images/BLE.png" width="600"/>
 </div>
 
-**BLE_test1**:
+**BT_test1**:
 - Read input from monitor and write to Mobile
 - Read input brom Mobile and write to Serial Monitor
 
@@ -48,7 +54,7 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 | **Serial Monitor** | **Mobile Phone BT** |
 
 
-**BLE_test2**:
+**BT_test2**:
 - Send data to Mobile
 - Send data to Serial Monitor
 
@@ -56,13 +62,23 @@ You need to install "Serial Bluetooth Terminal" App in your mobile phone.
 |:--:|:--:|
 | **Serial Monitor** | **Mobile Phone BT** |
 
-**BLE_IMU_send2**
+**BT_IMU_send2phone**
 
-We have made some modifications to the initial program to send IMU data with BLE: 
+We have made some modifications to the initial program to send IMU data to a mobile phone.: 
 
 | <img src="Doc/Images/BLE_IMU_send2_1.png" width="400"/> | <img src="Doc/Images/BLE_IMU_send2_2.png" width="200"/> |
 |:--:|:--:|
 | **Serial Monitor** | **Mobile Phone BT** |
+
+**BT_IMU_send2PC**
+
+We have add to the previous program a python code in out PC to receive IMU data from ESP32 IMU sensor.
+Before running python code, you need to:
+
+- Install the libraries: pip install pygame pyserial matplotlib
+- Pair your ESP32 with your computer: Through your operating system's Bluetooth settings.
+- Find the Bluetooth port: Look in your operating system's Bluetooth settings or in the "Device Manager" (Windows) to find the port name assigned to your ESP32.
+- Run the Python code.
 
 ## **2. WiFi communication**
 
