@@ -1,5 +1,5 @@
 {
-  //Uncomment the interpreter you want to use
+  //Specify the interpreter you want to use in terminal
   "terminal.integrated.env.windows": {
       "PATH": "C:\\RoboDK\\Python-Embedded\\;${env:PATH}"
   },
@@ -14,9 +14,9 @@
   "editor.tabSize": 4, // Set tab size to 4 spaces
   
   // Color theme setting
-  "workbench.colorTheme": "Visual Studio Light", // Set your preferred color theme here
+  "workbench.colorTheme": "Visual Studio Light", 
 
+  // Arduino extension settings
   "arduino.useArduinoCli": true,
   "C_Cpp.errorSquiggles": "disabled"
-
 }
