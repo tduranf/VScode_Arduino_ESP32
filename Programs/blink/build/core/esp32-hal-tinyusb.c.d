@@ -1,3 +1,0 @@
-C:\Users\manel.puig\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\Classes_PROJ\TP\VScode_Arduino_ESP32\blink\build\core\esp32-hal-tinyusb.c.o: \
- C:\Users\manel.puig\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.4\cores\esp32\esp32-hal-tinyusb.c \
- C:\Users\manel.puig\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.4/tools/sdk/esp32/qio_qspi/include/sdkconfig.h

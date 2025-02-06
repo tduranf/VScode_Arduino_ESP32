@@ -1,12 +1,12 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 #include <WiFi.h>
 #include <Wire.h>
 #include "MPU9250.h"
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "Robotics_UB";
+const char *password = "rUBot_xx";
 
 // MPU-9250 object
 MPU9250 mpu;
@@ -15,23 +15,23 @@ MPU9250 mpu;
 WiFiUDP udp;
 
 // IP i port del receptor
-const char *udpAddress = "192.168.67.66"; // Canvia-ho per la IP del teu ordinador
+const char *udpAddress = "192.168.0.191"; // Canvia-ho per la IP del teu ordinador
 const int udpPort = 12345;               // Port del receptor
 
 // Orientation data
 float roll = 0.0, pitch = 0.0, yaw = 0.0;
 
-#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void connectToWiFi();
-#line 33 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 33 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void updateOrientation();
-#line 41 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 41 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void sendOrientationUDP();
-#line 56 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 56 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void setup();
-#line 79 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 79 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void loop();
-#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\01_Eines_HW_SW\\03_SW\\11_Arduino_VScode\\ESP32_Tutorial\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
+#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_IMU\\WiFi_SocketUDP_IMU.ino"
 void connectToWiFi() {
   Serial.print("Connecting to Wi-Fi");
   WiFi.begin(ssid, password);
@@ -59,7 +59,7 @@ void sendOrientationUDP() {
   json += "\"yaw\":" + String(yaw, 2);
   json += "}";
   // Print to Serial Monitor
-  Serial.println("Sending data: " + json);
+  //Serial.println("Sending data: " + json);
   // Envia les dades via UDP
   udp.beginPacket(udpAddress, udpPort);
   udp.print(json);

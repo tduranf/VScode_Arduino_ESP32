@@ -8,12 +8,12 @@
 const char *deviceId = "ESP32_1";
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "Robotics_UB";
+const char *password = "rUBot_xx";
 
 // UDP settings
-IPAddress receiverESP32IP(192, 168, 67, 71); // IP address of the receiver ESP32 - CHANGE THIS!
-IPAddress receiverComputerIP(192, 168, 67, 66); // IP address of your computer - CHANGE THIS!
+IPAddress receiverESP32IP(192, 168, 0, 161); // IP address of the receiver ESP32 - CHANGE THIS!
+IPAddress receiverComputerIP(192, 168, 0, 191); // IP address of your computer - CHANGE THIS!
 const int udpPort = 12345;
 
 // UDP object
