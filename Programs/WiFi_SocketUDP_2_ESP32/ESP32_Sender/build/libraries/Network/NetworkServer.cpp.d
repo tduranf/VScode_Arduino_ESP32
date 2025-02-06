@@ -1,4 +1,4 @@
-C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\ESP32_Tutorial\VScode_Arduino_ESP32\Programs\WiFi_SocketUDP_2_ESP32\ESP32_Sender\build\libraries\Network\NetworkServer.cpp.o: \
+C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\VScode_Arduino_ESP32\Programs\WiFi_SocketUDP_2_ESP32\ESP32_Sender\build\libraries\Network\NetworkServer.cpp.o: \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\libraries\Network\src\NetworkServer.cpp \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\libraries\Network\src\NetworkServer.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/Arduino.h \
