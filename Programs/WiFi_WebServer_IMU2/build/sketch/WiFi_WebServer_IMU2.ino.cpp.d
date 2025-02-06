@@ -1,5 +1,10 @@
+<<<<<<< HEAD:Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/build/sketch/ESP32_Sender.ino.cpp.d
+C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\VScode_Arduino_ESP32\Programs\WiFi_SocketUDP_2_ESP32\ESP32_Sender\build\sketch\ESP32_Sender.ino.cpp.o: \
+ C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\01_Eines_HW_SW\03_SW\11_Arduino_VScode\VScode_Arduino_ESP32\Programs\WiFi_SocketUDP_2_ESP32\ESP32_Sender\build\sketch\ESP32_Sender.ino.cpp \
+=======
 C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\Classes_PROJ\TP\VScode_Arduino_ESP32\Programs\WiFi_WebServer_IMU2\build\sketch\WiFi_WebServer_IMU2.ino.cpp.o: \
  C:\Users\puigm\OneDrive\ -\ Universitat\ de\ Barcelona\Documents\02_Docencia_Manel\Classes_PROJ\TP\VScode_Arduino_ESP32\Programs\WiFi_WebServer_IMU2\build\sketch\WiFi_WebServer_IMU2.ino.cpp \
+>>>>>>> 729aa31091f0a7e69d49d7629076aab36507433c:Programs/WiFi_WebServer_IMU2/build/sketch/WiFi_WebServer_IMU2.ino.cpp.d
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/Arduino.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.0.7\cores\esp32/esp_arduino_version.h \
  C:\Users\puigm\AppData\Local\Arduino15\packages\esp32\tools\esp32-arduino-libs\idf-release_v5.1-632e0c2a\esp32/include/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
