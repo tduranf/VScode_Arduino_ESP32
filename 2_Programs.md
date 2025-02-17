@@ -47,7 +47,7 @@ We will use Classic Bluetooth to send data to:
 
 **BT_test1**:
 - Read input from monitor and write to Mobile
-- Read input brom Mobile and write to Serial Monitor
+- Read input from Mobile and write to Serial Monitor
 
 | <img src="Doc/Images/BLE_test1_1.png" width="400"/> | <img src="Doc/Images/BLE_test1_2.png" width="200"/> |
 |:--:|:--:|
@@ -75,7 +75,7 @@ We have made some modifications to the initial program to send IMU data to a mob
 We have add to the previous program a python code in out PC to receive IMU data from ESP32 IMU sensor.
 Before running python code, you need to:
 
-- Install the libraries: pip install pygame pyserial matplotlib
+- Install the libraries: pip install pyserial keyboard
 - Type "Bluetooth" in your PC searching line to Pair your ESP32 with your computer: Through your operating system's Bluetooth settings.
 - Type "Dispositius" to find the Bluetooth port: Look in your operating system's Bluetooth settings or in the "Device Manager" (Windows) to find the port name assigned to your ESP32.
 - Run the Python code.
