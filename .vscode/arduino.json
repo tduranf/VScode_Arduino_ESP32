@@ -1,15 +1,7 @@
 {
-<<<<<<< HEAD
-    "sketch": "Programs\\ESP32_Hostname_IP\\ESP32_Hostname_IP.ino",
+    "sketch": "Programs\\blink\\blink.ino",
     "configuration": "JTAGAdapter=default,PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none,ZigbeeMode=default",
     "board": "esp32:esp32:esp32",
     "port": "COM3",
-    "output": "Programs\\ESP32_Hostname_IP\\build"
-=======
-    "sketch": "Programs\\BT_IMU_send2PC\\BT_IMU_send2PC.ino",
-    "configuration": "JTAGAdapter=default,PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none,ZigbeeMode=default",
-    "board": "esp32:esp32:esp32",
-    "port": "COM3",
-    "output": "./Programs/BT_IMU_send2PC/build"
->>>>>>> 729aa31091f0a7e69d49d7629076aab36507433c
+    "output": "Programs\\blink\\build"
 }
