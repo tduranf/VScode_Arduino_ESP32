@@ -1,13 +1,13 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 1 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 #include <WiFi.h>
 #include <Wire.h>
 #include "MPU9250.h"
 
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "N15L";
+const char *password = "labepc1234";
 
 // MPU-9250 object
 MPU9250 mpu;
@@ -21,21 +21,21 @@ WiFiServer server(80);
 float roll = 0.0, pitch = 0.0, yaw = 0.0;
 
 // Function to handle JSON responses
-#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 22 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void sendJsonResponse(WiFiClient client);
-#line 37 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 37 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void sendHtmlResponse(WiFiClient client);
-#line 63 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 63 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void connectToWiFi();
-#line 75 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 75 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void updateOrientation();
-#line 84 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 84 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void handleWebRequest();
-#line 97 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 97 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void setup();
-#line 118 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 118 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void loop();
-#line 22 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
+#line 22 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
 void sendJsonResponse(WiFiClient client) {
   String json = "{";
   json += "\"roll\":" + String(roll, 2) + ",";

@@ -1,12 +1,12 @@
-# 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino"
-# 2 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino" 2
-# 3 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino" 2
-# 4 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_WebServer_IMU2\\WiFi_WebServer_IMU2.ino" 2
+# 1 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino"
+# 2 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino" 2
+# 3 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino" 2
+# 4 "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/WiFi_WebServer_IMU2/WiFi_WebServer_IMU2.ino" 2
 
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "N15L";
+const char *password = "labepc1234";
 
 // MPU-9250 object
 MPU9250 mpu;

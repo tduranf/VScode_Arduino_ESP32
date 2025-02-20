@@ -2,15 +2,15 @@
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.7\\cores\\esp32"
+    "Includepath": "/Users/tecla/Library/Arduino15/packages/esp32/hardware/esp32/3.1.1/cores/esp32"
   },
   {
     "Sourcefile": null,
     "Include": "",
-    "Includepath": "C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.7\\variants\\esp32"
+    "Includepath": "/Users/tecla/Library/Arduino15/packages/esp32/hardware/esp32/3.1.1/variants/esp32"
   },
   {
-    "Sourcefile": "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build\\sketch\\blink.ino.cpp",
+    "Sourcefile": "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/sketch/blink.ino.cpp",
     "Include": "",
     "Includepath": null
   }

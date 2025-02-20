@@ -1,11 +1,11 @@
 [
  {
-  "directory": "c:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32",
+  "directory": "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32",
   "arguments": [
-   "C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2302/bin/xtensa-esp32-elf-g++",
+   "/Users/tecla/Library/Arduino15/packages/esp32/tools/esp-x32/2405/bin/xtensa-esp32-elf-g++",
    "-MMD",
    "-c",
-   "@C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-632e0c2a\\esp32/flags/cpp_flags",
+   "@/Users/tecla/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-cfea4f7c-v1/esp32/flags/cpp_flags",
    "-w",
    "-Os",
    "-Werror=return-type",
@@ -16,27 +16,27 @@
    "-DARDUINO_BOARD=\"ESP32_DEV\"",
    "-DARDUINO_VARIANT=\"esp32\"",
    "-DARDUINO_PARTITION_default",
-   "-DARDUINO_HOST_OS=\"windows\"",
+   "-DARDUINO_HOST_OS=\"macosx\"",
    "-DARDUINO_FQBN=\"esp32:esp32:esp32:JTAGAdapter=default,PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none,ZigbeeMode=default\"",
    "-DESP32=ESP32",
    "-DCORE_DEBUG_LEVEL=0",
    "-DARDUINO_RUNNING_CORE=1",
    "-DARDUINO_EVENT_RUNNING_CORE=1",
    "-DARDUINO_USB_CDC_ON_BOOT=0",
-   "@C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-632e0c2a\\esp32/flags/defines",
-   "-IC:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink",
+   "@/Users/tecla/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-cfea4f7c-v1/esp32/flags/defines",
+   "-I/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink",
    "-iprefix",
-   "C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-632e0c2a\\esp32/include/",
-   "@C:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-632e0c2a\\esp32/flags/includes",
-   "-IC:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-632e0c2a\\esp32/qio_qspi/include",
-   "-IC:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.7\\cores\\esp32",
-   "-IC:\\Users\\puigm\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.7\\variants\\esp32",
-   "@C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build/build_opt.h",
-   "@C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build/file_opts",
-   "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build\\sketch\\blink.ino.cpp",
+   "/Users/tecla/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-cfea4f7c-v1/esp32/include/",
+   "@/Users/tecla/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-cfea4f7c-v1/esp32/flags/includes",
+   "-I/Users/tecla/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.3-cfea4f7c-v1/esp32/qio_qspi/include",
+   "-I/Users/tecla/Library/Arduino15/packages/esp32/hardware/esp32/3.1.1/cores/esp32",
+   "-I/Users/tecla/Library/Arduino15/packages/esp32/hardware/esp32/3.1.1/variants/esp32",
+   "@/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/build_opt.h",
+   "@/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/file_opts",
+   "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/sketch/blink.ino.cpp",
    "-o",
-   "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build\\sketch\\blink.ino.cpp.o"
+   "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/sketch/blink.ino.cpp.o"
   ],
-  "file": "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\blink\\build\\sketch\\blink.ino.cpp"
+  "file": "/Users/tecla/Documents/Pràctiques EBM/Robòtica/practiques/projecte 2 surgical robotics/esp32/VScode_Arduino_ESP32/Programs/blink/build/sketch/blink.ino.cpp"
  }
 ]

@@ -4,8 +4,8 @@
 
 
 // Wi-Fi credentials
-const char *ssid = "STRONG_ATRIA_AY4U_2.4";
-const char *password = "3HCG3ykAUc";
+const char *ssid = "N15L";
+const char *password = "labepc1234";
 
 // MPU-9250 object
 MPU9250 mpu;
