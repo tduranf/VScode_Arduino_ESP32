@@ -4,8 +4,8 @@
 #include "MPU9250.h"
 
 // Wi-Fi credentials
-const char *ssid = "Robotics_UB";
-const char *password = "rUBot_xx";
+const char *ssid = "MiFibra-E270";
+const char *password = "Pvep6Pcu";
 
 // MPU-9250 object
 MPU9250 mpu;
@@ -14,7 +14,7 @@ MPU9250 mpu;
 WiFiUDP udp;
 
 // IP i port del receptor
-const char *udpAddress = "192.168.1.3"; // Canvia-ho per la IP del teu ordinador
+const char *udpAddress = "192.168.1.104"; // Canvia-ho per la IP del teu ordinador
 const int udpPort = 12345;               // Port del receptor
 
 // Orientation data

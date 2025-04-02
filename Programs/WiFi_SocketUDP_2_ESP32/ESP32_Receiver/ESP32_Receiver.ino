@@ -3,8 +3,8 @@
 #include <ArduinoJson.h>
 
 // Wi-Fi credentials
-const char *ssid = "Robotics_UB";
-const char *password = "rUBot_xx";
+const char *ssid = "MiFibra-E270";
+const char *password = "Pvep6Pcu";
 
 // UDP settings
 const int udpPort = 12345;

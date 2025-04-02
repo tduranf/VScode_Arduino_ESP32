@@ -1,21 +1,21 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 1 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 #include <WiFi.h>
-#include <Wire.h>
 #include <WiFiUdp.h>
 #include "MPU9250.h"
+#include <Wire.h> //needed for I2C to read IMU
 #include <ArduinoJson.h>
 
 // Device ID
 const char *deviceId = "ESP32_1";
 
 // Wi-Fi credentials
-const char *ssid = "Robotics_UB";
-const char *password = "rUBot_xx";
+const char *ssid = "N15L";      
+const char *password = "labepc1234";   
 
 // UDP settings
-IPAddress receiverESP32IP(192, 168, 1, 5); // IP address of the receiver ESP32 - CHANGE THIS!
-IPAddress receiverComputerIP(192, 168, 1, 3); // IP address of your computer - CHANGE THIS!
+IPAddress receiverESP32IP(192, 168, 88, 44); // IP address of the receiver ESP32 - CHANGE THIS!
+IPAddress receiverComputerIP(192, 168, 88, 47); // IP address of your computer - CHANGE THIS!
 const int udpPort = 12345;
 
 // UDP object
@@ -26,17 +26,17 @@ MPU9250 mpu;
 // Orientation data
 float roll = 0.0, pitch = 0.0, yaw = 0.0;
 
-#line 27 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 27 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void connectToWiFi();
-#line 40 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 40 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void updateOrientation();
-#line 48 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 48 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void sendOrientationUDP();
-#line 73 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 73 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void setup();
-#line 96 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 96 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void loop();
-#line 27 "C:\\Users\\puigm\\OneDrive - Universitat de Barcelona\\Documents\\02_Docencia_Manel\\Classes_PROJ\\TP\\VScode_Arduino_ESP32\\Programs\\WiFi_SocketUDP_2_ESP32\\ESP32_Sender\\ESP32_Sender.ino"
+#line 27 "/Users/tecla/Documents/Robotica/practiques/Projecte 2 Surgical Robotics/VScode_Arduino_ESP32/Programs/WiFi_SocketUDP_2_ESP32/ESP32_Sender/ESP32_Sender.ino"
 void connectToWiFi() {
   Serial.print("Connecting to Wi-Fi");
   WiFi.begin(ssid, password);
@@ -85,7 +85,7 @@ void sendOrientationUDP() {
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin();
+  Wire.begin();//needed for I2C to read IMU
   delay(2000);
 
   // Inicialitza el MPU-9250
